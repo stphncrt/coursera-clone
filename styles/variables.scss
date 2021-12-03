@@ -1,0 +1,36 @@
+/*=============Screen Size====================*/
+
+@mixin screen($breakpoint) {
+    @if ($breakpoint==large) {
+        @media (max-width: 1200px) {
+            @content;
+        }
+        @if ($breakpoint==medium) {
+            @media (max-width: 900px) {
+                @content;
+            }
+        }
+        @if ($breakpoint==small) {
+            @media (max-width: 600px) {
+                @content;
+            }
+        }
+    }
+}
+
+
+/*============Color Pallete===========*/
+
+$darkBlue: #0056d2;
+$ligthBlue: #6096e3;
+$backgroundBlue: #ebf3ff;
+$lightGray: #f5f5f5;
+$circularBackground: #f9f7ef;
+$avatarPeripheril: #ffb16e;
+
+/*==========Font==================*/
+
+$sectionHeaderFont: 44px;
+$primaryFont: 20px;
+$navFooterFont: 14px;
+$primaryBoxFont: 16px;
