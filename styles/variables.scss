@@ -34,3 +34,10 @@ $sectionHeaderFont: 44px;
 $primaryFont: 20px;
 $navFooterFont: 14px;
 $primaryBoxFont: 16px;
+
+/*===============Displaying============*/
+
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
