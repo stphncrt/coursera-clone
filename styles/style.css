@@ -2,8 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*=============Screen Size====================*/
@@ -11,86 +10,82 @@ body {
 /*==========Font==================*/
 /*===============Displaying============*/
 /*============ NavBar Section============*/
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
+header {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  align-items: center;
   border-bottom: 1px solid #373a3c;
   border-top: 1px solid #373a3c;
   color: #373a3c;
   font-family: OpenSans, Arial, sans-serif;
-  padding: 0rem 2rem;
+  padding: 2rem;
+  gap: 2rem;
+  font-size: 20px;
 }
-
-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  list-style: none;
-  gap: 1.5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+header img {
+  width: 13rem;
 }
-
-nav li {
-  padding: 10px;
+header form input {
+  padding: 1rem;
+  font-size: 20px;
 }
-
-nav .right {
+header form label {
+  background-color: darkblue;
+  padding: 1rem;
+  color: #fff;
+}
+header nav {
   margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
 }
-
-nav .right li:hover {
+header nav .links {
+  text-decoration: none;
+}
+header nav .links:hover {
   text-decoration: underline;
-}
-
-nav .right .join {
-  color: #fff;
-  background-color: #0056d2;
-}
-
-nav .right .join:hover {
-  text-decoration: none;
-}
-
-nav input {
-  padding: 0 10px;
-  line-height: 20px;
-  height: 40px;
-  width: 450px;
-  border: 1px solid #636363;
-  border-radius: 2px 0 0 2px;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-}
-
-nav a {
-  text-decoration: none;
-}
-
-nav .coursera {
+  display: inline-block;
   color: #0056d2;
-  font-size: 40px;
 }
-
-nav img {
-  width: 150px;
-}
-
-nav .explore {
+header nav .join {
   color: #fff;
   background-color: #0056d2;
+  padding: 0.5rem;
 }
-/*# sourceMappingURL=style.css.map */
+header nav .join:hover {
+  text-decoration: none;
+  background-color: darkblue;
+}
+header .hide {
+  display: none;
+}
+header .touchable {
+  background-color: darkblue;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+@media (max-width: 1400px) {
+  header {
+    justify-content: center;
+  }
+  header .touchable,
+header .navbar,
+header .form {
+    display: none;
+  }
+  header .hide {
+    display: block;
+    color: #000;
+    position: absolute;
+    right: 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -9,61 +9,82 @@ body {
 
 /*============ NavBar Section============*/
 
-nav {
+header {
     @include flex(row);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    align-items: center;
     border-bottom: 1px solid #373a3c;
     border-top: 1px solid #373a3c;
     color: #373a3c;
     font-family: OpenSans, Arial, sans-serif;
-    padding: 0rem 2rem;
-    ul {
-        @include flex(row);
-        list-style: none;
-        gap: 1.5rem;
-        align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    font-size: 20px;
+    img {
+        width: 13rem;
     }
-    li {
-        padding: 10px;
+    form {
+        input {
+            padding: 1rem;
+            font-size: 20px;
+        }
+        label {
+            background-color: darkblue;
+            padding: 1rem;
+            color: #fff;
+        }
     }
-    .right {
+    nav {
         margin-left: auto;
-        li {
+        @include flex(row);
+        gap: 1.5rem;
+        .links {
+            text-decoration: none;
             &:hover {
                 text-decoration: underline;
-                // @include border-bottom(blue);
+                display: inline-block;
+                color: $darkBlue;
             }
         }
         .join {
             color: #fff;
             background-color: $darkBlue;
+            padding: 0.5rem;
             &:hover {
                 text-decoration: none;
+                background-color: darkblue;
             }
-            // background-color: $darkBlue;
         }
     }
-    input {
-        padding: 0 10px;
-        line-height: 20px;
-        height: 40px;
-        width: 450px;
-        border: 1px solid #636363;
-        border-radius: 2px 0 0 2px;
-        flex-grow: 2;
-        flex-basis: 50%;
+    .hide {
+        display: none;
     }
-    a {
-        text-decoration: none;
-    }
-    .coursera {
-        color: $darkBlue;
-        font-size: 40px;
-    }
-    img {
-        width: 150px;
-    }
-    .explore {
+    .touchable {
+        background-color: darkblue;
         color: #fff;
-        background-color: $darkBlue;
+        padding: 1rem 2rem;
+        font-size: 22px;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 1400px) {
+    header {
+        justify-content: center;
+        .touchable,
+        .navbar,
+        .form {
+            display: none;
+        }
+        .hide {
+            display: block;
+            color: #000;
+            position: absolute;
+            right: 1rem;
+        }
     }
 }
