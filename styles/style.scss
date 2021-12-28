@@ -5,6 +5,9 @@ body {
     box-sizing: border-box;
 }
 
+// * {
+//     border: 1px solid red;
+// }
 @import "./variables";
 
 /*============ NavBar Section============*/
@@ -17,25 +20,29 @@ header {
     right: 0;
     z-index: 1000;
     align-items: center;
-    border-bottom: 1px solid #373a3c;
-    border-top: 1px solid #373a3c;
+    border-bottom: 1px solid #677077;
+    border-top: 1px solid #677077;
     color: #373a3c;
     font-family: OpenSans, Arial, sans-serif;
-    padding: 2rem;
-    gap: 2rem;
-    font-size: 20px;
+    padding: 1.2rem;
+    // gap: 2rem;
+    font-size: 16px;
     img {
-        width: 13rem;
+        width: 10rem;
+        margin-right: 1.1rem;
     }
     form {
         input {
+            width: 150px;
             padding: 1rem;
-            font-size: 20px;
+            font-size: 16px;
+            margin-left: 0.5rem;
         }
         label {
-            background-color: darkblue;
-            padding: 1rem;
+            background-color: $darkBlue;
+            padding: 1.1rem;
             color: #fff;
+            margin-left: -5px;
         }
     }
     nav {
@@ -43,32 +50,40 @@ header {
         @include flex(row);
         gap: 1.5rem;
         .links {
+            white-space: nowrap;
             text-decoration: none;
+            color: #000;
             &:hover {
                 text-decoration: underline;
                 display: inline-block;
                 color: $darkBlue;
             }
         }
-        .join {
-            color: #fff;
-            background-color: $darkBlue;
-            padding: 0.5rem;
-            &:hover {
-                text-decoration: none;
-                background-color: darkblue;
-            }
+        .logIn {
+            color: $darkBlue;
         }
     }
-    .hide {
+    .join {
+        text-align: center;
+        width: 120px;
+        color: #fff;
+        margin-left: 1rem;
+        &:hover {
+            text-decoration: none;
+            background-color: darkblue;
+        }
+    }
+    .hide,
+    .menu {
         display: none;
     }
     .touchable {
-        background-color: darkblue;
+        background-color: $darkBlue;
         color: #fff;
-        padding: 1rem 2rem;
-        font-size: 22px;
+        padding: 0.7rem 1.5rem;
+        font-size: 18px;
         font-weight: bold;
+        border-radius: 3px;
     }
 }
 
@@ -85,6 +100,17 @@ header {
             color: #000;
             position: absolute;
             right: 1rem;
+            font-size: 24px;
+        }
+        .menu {
+            display: block;
+            color: #000;
+            position: absolute;
+            left: 1rem;
+            font-size: 24px;
+        }
+        img {
+            width: 10rem;
         }
     }
 }

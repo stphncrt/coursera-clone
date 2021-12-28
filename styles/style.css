@@ -19,25 +19,28 @@ header {
   right: 0;
   z-index: 1000;
   align-items: center;
-  border-bottom: 1px solid #373a3c;
-  border-top: 1px solid #373a3c;
+  border-bottom: 1px solid #677077;
+  border-top: 1px solid #677077;
   color: #373a3c;
   font-family: OpenSans, Arial, sans-serif;
-  padding: 2rem;
-  gap: 2rem;
-  font-size: 20px;
+  padding: 1.2rem;
+  font-size: 16px;
 }
 header img {
-  width: 13rem;
+  width: 10rem;
+  margin-right: 1.1rem;
 }
 header form input {
+  width: 150px;
   padding: 1rem;
-  font-size: 20px;
+  font-size: 16px;
+  margin-left: 0.5rem;
 }
 header form label {
-  background-color: darkblue;
-  padding: 1rem;
+  background-color: #0056d2;
+  padding: 1.1rem;
   color: #fff;
+  margin-left: -5px;
 }
 header nav {
   margin-left: auto;
@@ -46,31 +49,39 @@ header nav {
   gap: 1.5rem;
 }
 header nav .links {
+  white-space: nowrap;
   text-decoration: none;
+  color: #000;
 }
 header nav .links:hover {
   text-decoration: underline;
   display: inline-block;
   color: #0056d2;
 }
-header nav .join {
-  color: #fff;
-  background-color: #0056d2;
-  padding: 0.5rem;
+header nav .logIn {
+  color: #0056d2;
 }
-header nav .join:hover {
+header .join {
+  text-align: center;
+  width: 120px;
+  color: #fff;
+  margin-left: 1rem;
+}
+header .join:hover {
   text-decoration: none;
   background-color: darkblue;
 }
-header .hide {
+header .hide,
+header .menu {
   display: none;
 }
 header .touchable {
-  background-color: darkblue;
+  background-color: #0056d2;
   color: #fff;
-  padding: 1rem 2rem;
-  font-size: 22px;
+  padding: 0.7rem 1.5rem;
+  font-size: 18px;
   font-weight: bold;
+  border-radius: 3px;
 }
 
 @media (max-width: 1400px) {
@@ -87,5 +98,16 @@ header .form {
     color: #000;
     position: absolute;
     right: 1rem;
+    font-size: 24px;
+  }
+  header .menu {
+    display: block;
+    color: #000;
+    position: absolute;
+    left: 1rem;
+    font-size: 24px;
+  }
+  header img {
+    width: 10rem;
   }
 }/*# sourceMappingURL=style.css.map */
