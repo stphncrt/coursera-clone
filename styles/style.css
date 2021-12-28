@@ -3,6 +3,13 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: OpenSans, Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*=============Screen Size====================*/
@@ -17,12 +24,11 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 1;
+  background-color: #fff;
   align-items: center;
   border-bottom: 1px solid #677077;
   border-top: 1px solid #677077;
-  color: #373a3c;
-  font-family: OpenSans, Arial, sans-serif;
   padding: 1.2rem;
   font-size: 16px;
 }
@@ -30,17 +36,22 @@ header img {
   width: 10rem;
   margin-right: 1.1rem;
 }
+header form {
+  display: flex;
+  flex-wrap: nowrap;
+}
 header form input {
-  width: 150px;
-  padding: 1rem;
+  width: 170px;
+  padding: 0.8rem;
   font-size: 16px;
   margin-left: 0.5rem;
 }
 header form label {
   background-color: #0056d2;
-  padding: 1.1rem;
+  padding: 1rem;
   color: #fff;
   margin-left: -5px;
+  display: inline-block;
 }
 header nav {
   margin-left: auto;
@@ -63,9 +74,10 @@ header nav .logIn {
 }
 header .join {
   text-align: center;
-  width: 120px;
+  width: 140px;
   color: #fff;
   margin-left: 1rem;
+  white-space: nowrap;
 }
 header .join:hover {
   text-decoration: none;
@@ -79,12 +91,60 @@ header .touchable {
   background-color: #0056d2;
   color: #fff;
   padding: 0.7rem 1.5rem;
-  font-size: 18px;
   font-weight: bold;
   border-radius: 3px;
 }
 
-@media (max-width: 1400px) {
+#learn {
+  margin: 10rem 1rem 3rem 15rem;
+  display: flex;
+  flex-direction: row;
+}
+#learn .learnContent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  width: 550px;
+}
+#learn .learnContent h1 {
+  font-size: 64px;
+  white-space: nowrap;
+  margin-bottom: 3rem;
+}
+#learn .learnContent p {
+  font-size: 20px;
+  margin-bottom: 3rem;
+}
+#learn img {
+  width: 43%;
+  margin-left: auto;
+}
+#learn .buttonDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+#learn .buttonDiv .joinFor {
+  color: #fff;
+  background-color: #0056d2;
+  padding: 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  width: 140px;
+}
+#learn .buttonDiv .try {
+  border: 2px solid #0056d2;
+  border-radius: 4px;
+  color: #0056d2;
+  text-decoration: none;
+  width: 280px;
+  padding: 1rem;
+}
+
+@media (max-width: 1200px) {
   header {
     justify-content: center;
   }
@@ -109,5 +169,14 @@ header .form {
   }
   header img {
     width: 10rem;
+  }
+
+  #learn img {
+    display: 38%;
+  }
+}
+@media (max-width: 1000px) {
+  #learn img {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

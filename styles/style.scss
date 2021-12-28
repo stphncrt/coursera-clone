@@ -3,11 +3,16 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: OpenSans, Arial, sans-serif;
 }
 
-// * {
-//     border: 1px solid red;
-// }
+* {
+    // border: 1px solid red;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 @import "./variables";
 
 /*============ NavBar Section============*/
@@ -18,31 +23,32 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 1;
+    background-color: #fff;
     align-items: center;
     border-bottom: 1px solid #677077;
     border-top: 1px solid #677077;
-    color: #373a3c;
-    font-family: OpenSans, Arial, sans-serif;
     padding: 1.2rem;
-    // gap: 2rem;
-    font-size: 16px;
+    font-size: $navFooterFont;
     img {
         width: 10rem;
         margin-right: 1.1rem;
     }
     form {
+        display: flex;
+        flex-wrap: nowrap;
         input {
-            width: 150px;
-            padding: 1rem;
-            font-size: 16px;
+            width: 170px;
+            padding: 0.8rem;
+            font-size: $navFooterFont;
             margin-left: 0.5rem;
         }
         label {
             background-color: $darkBlue;
-            padding: 1.1rem;
+            padding: 1rem;
             color: #fff;
             margin-left: -5px;
+            display: inline-block;
         }
     }
     nav {
@@ -65,9 +71,10 @@ header {
     }
     .join {
         text-align: center;
-        width: 120px;
+        width: 140px;
         color: #fff;
         margin-left: 1rem;
+        white-space: nowrap;
         &:hover {
             text-decoration: none;
             background-color: darkblue;
@@ -81,13 +88,61 @@ header {
         background-color: $darkBlue;
         color: #fff;
         padding: 0.7rem 1.5rem;
-        font-size: 18px;
         font-weight: bold;
         border-radius: 3px;
     }
 }
 
-@media (max-width: 1400px) {
+//=========== Navbar section Ends============
+//==========Learn Without Limits Section starts====
+#learn {
+    margin: 10rem 1rem 3rem 15rem;
+    @include flex(row);
+    .learnContent {
+        @include flex(column);
+        margin-top: 10rem;
+        width: 550px;
+        h1 {
+            font-size: 64px;
+            white-space: nowrap;
+            margin-bottom: 3rem;
+        }
+        p {
+            font-size: $primaryFont;
+            margin-bottom: 3rem;
+        }
+    }
+    img {
+        width: 43%;
+        margin-left: auto;
+    }
+    .buttonDiv {
+        @include flex(row);
+        gap: 1rem;
+        text-align: center;
+        font-size: $navFooterFont;
+        font-weight: bold;
+        .joinFor {
+            color: #fff;
+            background-color: $darkBlue;
+            padding: 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            width: 140px;
+        }
+        .try {
+            border: 2px solid $darkBlue;
+            border-radius: 4px;
+            color: $darkBlue;
+            text-decoration: none;
+            width: 280px;
+            padding: 1rem;
+        }
+    }
+}
+
+//==========Learn Without Limits Section Ends====
+@media (max-width: 1200px) {
     header {
         justify-content: center;
         .touchable,
@@ -112,5 +167,14 @@ header {
         img {
             width: 10rem;
         }
+    }
+    #learn img {
+        display: 38%;
+    }
+}
+
+@media (max-width: 1000px) {
+    #learn img {
+        display: none;
     }
 }
